@@ -28,6 +28,25 @@ def about():
     return render_template("about.html", page_title="About", company=data)
 
 
+# route for member details view
+@app.route("/about/<member_name>")  # <> pass data from URL path to view
+def about_member(member_name):
+    # create an empty object to store the data
+    member = {}
+    # open the company.json file for read-only and refer to it as json_data
+    with open("data/company.json", "r") as json_data:
+        # create variable for the data that was pulled through
+        data = json.load(json_data)
+        # iterate through the data
+        for obj in data:
+            # check if object's url key(file) is equal to member_name(url)
+            if obj["url"] == member_name:
+                # set empty member to be equal to the obj instance in loop
+                member = obj
+
+    return render_template("member.html", member=member)
+
+
 @app.route("/contact")
 def contact():
     return render_template("contact.html", page_title="Contact")
