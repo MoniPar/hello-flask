@@ -1,3 +1,8 @@
+[Information and images taken from:](https://lotr.fandom.com/wiki/Thorin_and_Company)
+
+[Template from StartBootstrap used:](https://startbootstrap.com/theme/clean-blog)
+_____
+
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
 Welcome Monique Parnis,
