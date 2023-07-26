@@ -1,6 +1,8 @@
 # import the Flask class
 from flask import Flask, render_template
 import os
+import json
+
 
 # create an instance of it and store it in a variable called 'app'
 app = Flask(__name__)  # flask needs this to know where to look for
@@ -15,17 +17,25 @@ def index():
 
 @app.route("/about")
 def about():
-    return render_template("about.html")
+    # initialise an empty list
+    data = []
+    # instruct Python to open the JSON file in order to read it
+    # and assign the contents of the file to a new variable
+    with open("data/company.json", "r") as json_data:
+        # set the empty data list to equal the parsed JSON data
+        data = json.load(json_data)
+    # data list is passed in the return statement with the name of company
+    return render_template("about.html", page_title="About", company=data)
 
 
 @app.route("/contact")
 def contact():
-    return render_template("contact.html")
+    return render_template("contact.html", page_title="Contact")
 
 
 @app.route("/careers")
 def careers():
-    return render_template("careers.html")
+    return render_template("careers.html", page_title="Careers")
 
 
 if __name__ == "__main__":  # "__main__" d name of d default module in Python
