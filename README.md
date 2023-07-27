@@ -1,6 +1,8 @@
 [Information and images taken from:](https://lotr.fandom.com/wiki/Thorin_and_Company)
 
 [Template from StartBootstrap used:](https://startbootstrap.com/theme/clean-blog)
+
+[Logging in to Heroku via CLI using Authorisation token](https://dashboard.heroku.com/account/applications) - The Authorization token was copied and pasted in the CLI when asked for a password.
 _____
 
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
