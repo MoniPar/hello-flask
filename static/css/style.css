@@ -9,3 +9,12 @@
 .featurette {
     margin: 2rem 0;
 }
+
+.flashes li {
+    background-color: rgba(255, 127, 80, .4);
+    font-weight: 800;
+    margin-top: 1rem;
+    padding: 1rem;
+    list-style: none;
+
+}
